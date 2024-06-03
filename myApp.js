@@ -8,8 +8,8 @@ app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({action:'deny'}));
 app.use(helmet.xssFilter());
 
-// app.use(helmet.noSnift());
-// app.use(helmet.ieNoOpen());
+app.use(helmet.noSnift());
+app.use(helmet.ieNoOpen());
 // const timeImSeconds =90*24*60*60;
 // app.use(helmet.hsts({maxAge:timeImSeconds, force:true}) );
 //  app.use(helmet.dnsPrefetchControl());
