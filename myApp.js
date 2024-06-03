@@ -9,7 +9,7 @@ app.use(helmet.frameguard({action:'deny'}));
 app.use(helmet.xssFilter());
 
 app.use(helmet.noSnift());
-app.use(helmet.ieNoOpen());
+// app.use(helmet.ieNoOpen());
 // const timeImSeconds =90*24*60*60;
 // app.use(helmet.hsts({maxAge:timeImSeconds, force:true}) );
 //  app.use(helmet.dnsPrefetchControl());
@@ -17,14 +17,24 @@ app.use(helmet.ieNoOpen());
 
 // app.use(
 //   helmet.contentSecurityPolicy({
+    // directives:{
+    //   defaultScr:["'self'"],
+    //   scriptScr:["'self'",'trusted-cdn.com'],
+
+    // }
+//   }) 
+// );
+// app.use(helmet({
+//   contentSecurityPolicy:{
 //     directives:{
 //       defaultScr:["'self'"],
 //       scriptScr:["'self'",'trusted-cdn.com'],
 
 //     }
-//   }) 
-// );
 
+//   },
+//   noCache:true
+// }));
 
 
 module.exports = app;
