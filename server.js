@@ -4,10 +4,8 @@
  *******************************************/
 
 var express = require("express");
-const bodyParser=require("body-parser");
-const  fccTesting=require('./freeCodeCamp/fcctesting.js')
 var app = express();
-const bcrypt=require('bcrypt');
+// const bcrypt=require('bcrypt');
 
 app.disable("x-powered-by");
 var fs = require("fs");
