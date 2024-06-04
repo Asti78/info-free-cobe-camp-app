@@ -17,23 +17,23 @@ app.use(helmet.hsts({maxAge:timeImSeconds, force:true}) );
 app.use(
   helmet.contentSecurityPolicy({
     directives:{
-      defaultScr:["'self'"],
-      scriptScr:["'self'",'trusted-cdn.com'],
+      defaultSrc:["'self'"],
+      scriptSrc:["'self'",'trusted-cdn.com'],
 
     }
   }) 
  );
-// app.use(helmet({
-//   contentSecurityPolicy:{
-//     directives:{
-//       defaultScr:["'self'"],
-//       scriptScr:["'self'",'trusted-cdn.com'],
+app.use(helmet({
+  contentSecurityPolicy:{
+    directives:{
+      defaultSrc:["'self'"],
+      scriptSrc:["'self'",'trusted-cdn.com'],
 
-//     }
+    }
 
-//   },
-//   noCache:true
-// }));
+  },
+  noCache:true
+}));
 
 
 module.exports = app;
