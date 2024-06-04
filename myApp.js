@@ -11,8 +11,8 @@ app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
 const timeImSeconds =90*24*60*60;
 app.use(helmet.hsts({maxAge:timeImSeconds, force:true}) );
-//  app.use(helmet.dnsPrefetchControl());
-//  app.use(helmet.noCache() ); 
+ app.use(helmet.dnsPrefetchControl());
+ app.use(helmet.noCache() ); 
 
 // app.use(
 //   helmet.contentSecurityPolicy({
