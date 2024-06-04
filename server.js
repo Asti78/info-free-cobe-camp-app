@@ -5,7 +5,7 @@
 
 var express = require("express");
 var app = express();
-// const bcrypt=require('bcrypt');
+const bcrypt=require('bcrypt');
 
 app.disable("x-powered-by");
 var fs = require("fs");
