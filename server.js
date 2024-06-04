@@ -8,7 +8,7 @@ fccTesting(app);
 const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
-bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
+const hash=bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
     console.log(hash);
     bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
         console.log(res);
@@ -22,11 +22,7 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 //END_ASYNC
 
 //START_SYNC
-var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
-console.log(hash);
-var result = bcrypt.compareSync(myPlaintextPassword, hash);
-console.log(result);
-
+// https://free-cobe-camp-app.onrender.com
 
 
 //END_SYNC
