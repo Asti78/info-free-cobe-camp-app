@@ -14,15 +14,15 @@ app.use(helmet.hsts({maxAge:timeImSeconds, force:true}) );
  app.use(helmet.dnsPrefetchControl());
  app.use(helmet.noCache() ); 
 
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     directives:{
-//       defaultScr:["'self'"],
-//       scriptScr:["'self'",'trusted-cdn.com'],
+app.use(
+  helmet.contentSecurityPolicy({
+    directives:{
+      defaultScr:["'self'"],
+      scriptScr:["'self'",'trusted-cdn.com'],
 
-//     }
-//   }) 
-// );
+    }
+  }) 
+ );
 // app.use(helmet({
 //   contentSecurityPolicy:{
 //     directives:{
